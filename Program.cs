@@ -22,7 +22,16 @@
 //ImprimirValores(quieries.LibrosCategoriaJava());
 
 //Libros Java ordenados por titulo
-ImprimirValores(quieries.Libros450PagDescendentes());
+//ImprimirValores(quieries.Libros450PagDescendentes());
+
+//Los 3 libros más recientemente publicados
+//ImprimirValores(quieries.TresLibrosMasRecientes());
+
+//Tercer y cuarto libro con más de 400 paginas
+//ImprimirValores(quieries.TercerYCuartoLibroConMasDe400());
+
+//Tres primeros libros filtrados con select
+ImprimirValores(quieries.TresPrimersLibros());
 void ImprimirValores(IEnumerable<Book> libros)
 {
     Console.WriteLine("{0, -10} {1,-60} {2, 15} {3, 15}\n", "#", "Titulo", "N. Paginas", "Fecha publicacion");
