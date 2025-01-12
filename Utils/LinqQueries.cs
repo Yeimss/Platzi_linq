@@ -67,4 +67,8 @@ public class LinqQueries
             PageCount = l.PageCount,
         });
     }
+    public int CantidadEntre200Y500Pag()
+    {
+        return librosCollection.Count(l => l.PageCount >= 200 && l.PageCount <= 500);
+    }
 }

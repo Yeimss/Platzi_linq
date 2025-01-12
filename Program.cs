@@ -1,37 +1,40 @@
-﻿LinqQueries quieries = new LinqQueries();
+﻿LinqQueries queries = new LinqQueries();
 
 //Toda la colección
-//ImprimirValores(quieries.GetAll()); 
+//ImprimirValores(queries.GetAll()); 
 
 //Libros con fecha de publicación >= 2000
-//ImprimirValores(quieries.LibrosPost2000()); 
+//ImprimirValores(queries.LibrosPost2000()); 
 
 //250 paginas o mas y que el titulo contenga "in Action"
-//ImprimirValores(quieries.LibrosInAction250Pages());
+//ImprimirValores(queries.LibrosInAction250Pages());
 
 //Todos los libros tienen status
-//Console.WriteLine($"¿Todos los libros tienen status?: {quieries.NingunLibroVacio()}");
+//Console.WriteLine($"¿Todos los libros tienen status?: {queries.NingunLibroVacio()}");
 
 //Algun libro publicado en 2005
-//Console.WriteLine($"¿Algun libro publicado en 2005?: {quieries.HayLibro2005()}");
+//Console.WriteLine($"¿Algun libro publicado en 2005?: {queries.HayLibro2005()}");
 
 //Libros python
-//ImprimirValores(quieries.LibrosPython());
+//ImprimirValores(queries.LibrosPython());
 
 //Libros Java ordenados por titulo
-//ImprimirValores(quieries.LibrosCategoriaJava());
+//ImprimirValores(queries.LibrosCategoriaJava());
 
 //Libros Java ordenados por titulo
-//ImprimirValores(quieries.Libros450PagDescendentes());
+//ImprimirValores(queries.Libros450PagDescendentes());
 
 //Los 3 libros más recientemente publicados
-//ImprimirValores(quieries.TresLibrosMasRecientes());
+//ImprimirValores(queries.TresLibrosMasRecientes());
 
 //Tercer y cuarto libro con más de 400 paginas
-//ImprimirValores(quieries.TercerYCuartoLibroConMasDe400());
+//ImprimirValores(queries.TercerYCuartoLibroConMasDe400());
 
 //Tres primeros libros filtrados con select
-ImprimirValores(quieries.TresPrimersLibros());
+//ImprimirValores(queries.TresPrimersLibros());
+
+//Cantidad de libros entre 200 y 500 pag
+Console.WriteLine($"Cantidad de libros que tienen entre 200 y 500 páginas: {queries.CantidadEntre200Y500Pag()}");
 void ImprimirValores(IEnumerable<Book> libros)
 {
     Console.WriteLine("{0, -10} {1,-60} {2, 15} {3, 15}\n", "#", "Titulo", "N. Paginas", "Fecha publicacion");
